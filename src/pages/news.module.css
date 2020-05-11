@@ -1,0 +1,25 @@
+.newsTitleLink {
+  text-decoration: none;
+  color: #000;
+}
+
+.pageName {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.article {
+  background: #fff;
+  padding: 20px;
+}
+
+.newsTitle {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.newsExcerpt {
+  white-space: break-spaces;
+}
