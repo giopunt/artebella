@@ -1,0 +1,19 @@
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  text-align: center;
+  margin: 0 auto;
+  border-top: 1px solid #E6EAEA;
+}
+
+.feed a {
+  display: flex;
+  padding-top: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.feed a:hover {
+  opacity: 0.5;
+}

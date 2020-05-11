@@ -1,16 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import MicIcon from '@material-ui/icons/Mic';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import Header from "./header"
+import Footer from "./footer"
+import Instagram from "./instagram"
+
 import "./layout.css"
+import "./main.css"
+
+import styles from "./layout.module.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,23 +24,26 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+        className={styles.content}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <main className={styles.main}>{children}</main>
+        <div className={styles.sidebar}>
+          <ul>
+            <li>
+              <a className={styles.sidebarTitle} target="blank" href="https://open.spotify.com/show/2BYMS5jTQIWNs3RsDlguf4?si=DbAJKoW-Sam2aQJwF0Ab9g">PODCAST <MicIcon /></a>
+            </li>
+            <li>
+              <a className={styles.sidebarTitle} target="blank" href="https://www.instagram.com/artebella.it/">INSTAGRAM <PhotoCameraIcon/></a>
+              <Instagram />
+            </li>
+          </ul>
+        </div>
       </div>
-    </>
+      <Footer siteTitle={data.site.siteMetadata.title} />
+    </div>
   )
 }
 

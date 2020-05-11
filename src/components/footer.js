@@ -1,17 +1,14 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import navigation from "../config/navigation"
 
-import styles from "./header.module.css"
+import styles from "./footer.module.css"
 
-const Header = ({ siteTitle }) => (
-  <header
-    className={styles.header}
-  >
+const Footer = ({ siteTitle }) => (
+  <footer className={styles.footer}>
     <nav className={styles.nav}>
       <ul>
-        <li><Link to="/" className={[styles.link, styles.logo].join(' ')}>{siteTitle}</Link></li>
         {
           navigation.map(({ label, to, subnav }) => (
             <li className={styles.navlink}>
@@ -33,15 +30,16 @@ const Header = ({ siteTitle }) => (
         }
       </ul>
     </nav>
-  </header>
+    <div className={styles.notice}>{new Date().getFullYear()} © {siteTitle.toUpperCase()} / Tutti i diritti riservati</div>
+  </footer>
 )
 
-Header.propTypes = {
+Footer.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Footer.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Footer
