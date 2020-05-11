@@ -39,6 +39,10 @@
   .nav ul {
     grid-template-columns: 1fr;
   }
+  
+  .nav ul li {
+    border-left: 0px;
+  }
 }
 
 .link {
