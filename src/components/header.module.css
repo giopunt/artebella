@@ -1,5 +1,5 @@
 @value colors: "./colors.css";
-@value borderColor, artebellaYellow, artebellaRed, artebellaGreen, artebellaPurple  from colors;
+@value themeBackground, borderColor, artebellaYellow, artebellaRed, artebellaGreen, artebellaPurple  from colors;
 
 .header {
   display: flex;
@@ -35,13 +35,31 @@
   border-left: 0px;
 }
 
-@media only screen and (max-width: 700px) { 
+.menuIcon {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 20px;
+  border: 10px solid rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .menuIcon {
+    display: flex;
+  }
+
   .nav ul {
     grid-template-columns: 1fr;
   }
   
   .nav ul li {
     border-left: 0px;
+  }
+
+  .navlink.desktop {
+    display: none;
   }
 }
 
