@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
                 <ul>
                   {
                     subnav.map(({ to, label }) => (
-                      <li key={label}>
+                      <li className={styles.sublink} key={label}>
                         <Link to={to} className={styles.link}>{label}</Link>
                       </li>
                     ))
