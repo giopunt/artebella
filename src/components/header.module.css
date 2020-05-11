@@ -31,7 +31,7 @@
   border-bottom: 1px solid borderColor;
 }
 
-.nav ul li:first-of-type { 
+.nav > ul > li:first-of-type { 
   border-left: 0px;
 }
 

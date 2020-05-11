@@ -22,7 +22,7 @@ const Instagram = () => {
   return (
     <div className={styles.feed}>
       {
-        feed.allInstaNode.edges.map(({node}) => (<a target="blank" href={`https://www.instagram.com/p/${node.id}/`} style={{ backgroundImage: `url(${node.preview})` }}></a>))
+        feed.allInstaNode.edges.map(({node}) => (<a key={node.id} target="blank" href={`https://www.instagram.com/p/${node.id}/`} style={{ backgroundImage: `url(${node.preview})` }}></a>))
       }
     </div>
   )

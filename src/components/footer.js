@@ -11,14 +11,14 @@ const Footer = ({ siteTitle }) => (
       <ul>
         {
           navigation.map(({ label, to, subnav }) => (
-            <li className={styles.navlink}>
+            <li className={styles.navlink} key={label}>
               <Link to={to} className={styles.link}>{label}</Link>
               {
                 subnav &&  
                 <ul>
                   {
                     subnav.map(({ to, label }) => (
-                      <li>
+                      <li key={label}>
                         <Link to={to} className={styles.link}>{label}</Link>
                       </li>
                     ))
