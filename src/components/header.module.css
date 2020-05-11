@@ -1,3 +1,6 @@
+@value colors: "./colors.css";
+@value borderColor from colors;
+
 .header {
   display: flex;
 }
@@ -13,7 +16,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   text-align: center;
 }
 
@@ -24,9 +27,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #f4f7f6;
-  border-left: 1px solid #E6EAEA;
-  border-bottom: 1px solid #E6EAEA;
+  border-left: 1px solid borderColor;
+  border-bottom: 1px solid borderColor;
+}
+
+.nav ul li:first-of-type { 
+  border-left: 0px;
 }
 
 @media only screen and (max-width: 700px) { 
@@ -37,32 +43,18 @@
 
 @media only screen and (max-width: 800px) { 
   .nav ul li:last-of-type {
-    border-right: 1px solid #E6EAEA;
+    border-right: 1px solid borderColor;
     margin-right: -1px;
   }
 }
 
 .link {
-  text-decoration: none;
-  color: #000;
-  font-weight: 400;
-  padding: 1rem 0;
-  width: 100%;
-}
-
-.link:hover {
-  background-color: #fffefc;
-  /*font-weight: 700;*/
+  composes: navigationlink from "./styles.module.css";
 }
 
 @media only screen and (max-width: 600px) {
   .nav {
-    border-top: 1px solid #E6EAEA;
-  } 
-  
-  .link:hover {
-    background-color: #f4f7f6;
-    color: #333;
+    border-top: 1px solid borderColor;
   }
 }
 
@@ -71,9 +63,14 @@
   font-weight: 900;
 }
 
+@media only screen and (max-width: 800px) { 
+  .link.logo {
+    font-size: 29px;
+  }
+}
+
 .navlink .link {
   text-transform: uppercase;
-  font-size: 16px;
 }
 
 .nav ul ul {
@@ -86,7 +83,7 @@
   bottom: 0px;
   vertical-align: bottom;
   top: 100%;
-  border-top: 1px solid #E6EAEA;
+  border-top: 1px solid borderColor;
   z-index: 2;
 }
 
@@ -101,7 +98,7 @@
 }
 
 .nav ul ul li {
-  border-right: 1px solid #E6EAEA;
+  border-right: 1px solid borderColor;
   margin-left: -1px;
   margin-right: -1px;
 }

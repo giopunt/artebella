@@ -1,5 +1,8 @@
+@value colors: "./colors.css";
+@value borderColor from colors;
+
 .footer {
-  border-top: 1px solid #E6EAEA;
+  border-top: 1px solid borderColor;
   padding: 5vmin;
   display: flex;
   flex-direction: column;

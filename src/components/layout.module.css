@@ -1,3 +1,6 @@
+@value colors: "./colors.css";
+@value borderColor from colors;
+
 .content {
   display: flex;
 }
@@ -17,7 +20,8 @@
 
 .sidebar {
   max-width: 300px;
-  min-width: 300px;
+  min-width: 250px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 700px) { 
@@ -33,14 +37,13 @@
 }
 
 .sidebar ul li {
-  background-color: #f4f7f6;
-  border-left: 1px solid #E6EAEA;
-  border-bottom: 1px solid #E6EAEA;
+  border-left: 1px solid borderColor;
+  border-bottom: 1px solid borderColor;
 }
 
 @media only screen and (max-width: 700px) { 
   .sidebar ul li:first-of-type {
-    border-top: 1px solid #E6EAEA;
+    border-top: 1px solid borderColor;
   }
 
   .sidebar ul li {
@@ -49,18 +52,8 @@
 }
 
 .sidebarTitle {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-  text-align: center;
-  padding: 1rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sidebarTitle:hover {
-  background: #fff;;
+  composes: navigationlink from "./styles.module.css";
+  text-transform: uppercase;
 }
 
 .sidebarTitle svg {
