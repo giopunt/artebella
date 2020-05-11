@@ -41,13 +41,6 @@
   }
 }
 
-@media only screen and (max-width: 800px) { 
-  .nav ul li:last-of-type {
-    border-right: 1px solid borderColor;
-    margin-right: -1px;
-  }
-}
-
 .link {
   composes: navigationlink from "./styles.module.css";
 }
