@@ -1,6 +1,7 @@
 ---
 draft: true
 path: /news/il-salotto-creativo
+hero: /assets/salotto_post.png
 date: 2020-05-11T16:35:10.913Z
 title: il salotto creativo
 excerpt: >-
@@ -12,9 +13,7 @@ excerpt: >-
 
   Interesse, passione, curiosità, intraprendenza, perseveranza, audacia, sono solo alcuni tra i fattori che accomunano gli ospiti.
 ---
-![](/assets/salotto_post.png "il salotto creativo")
-
-## Decimo appuntamento con Lise Arlot, co-owning art
+## **Decimo appuntamento con Lise Arlot, co-owning art**
 
 #### Giovedi 13 Maggio, 2020
 
