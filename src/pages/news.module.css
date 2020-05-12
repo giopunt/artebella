@@ -1,6 +1,7 @@
 .newsTitleLink {
   text-decoration: none;
   color: #000;
+  display: flex;
 }
 
 .pageName {
@@ -9,17 +10,32 @@
 }
 
 .article {
-  background: #fff;
-  padding: 20px;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  //background: #fff;
+  //padding: 20px;
 }
 
 .newsTitle {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #000;
+}
+
+@media only screen and (max-width: 700px) {
+  .newsTitle {
+    font-size: 32px;
+  }
 }
 
 .newsExcerpt {
+  display: none;
   white-space: break-spaces;
+}
+
+.heroImage {
+  margin-left: 20px;
+  height: 300px;
+  width: 300px;
 }

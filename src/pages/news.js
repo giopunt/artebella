@@ -8,17 +8,19 @@ import styles from "./news.module.css"
 const News = ({data, props}) => (
   <Layout>
     <SEO title="news" />
-    <h1 className={styles.pageName}>news</h1>
     <section>
       {
         data.allMarkdownRemark.edges.map(({ node }) => (
           <article className={styles.article} key={node.id}>
             <Link className={styles.newsTitleLink} to={node.frontmatter.path}>
-              <h4 className={styles.newsTitle}>{node.frontmatter.title}</h4>
-              <div
+              <div>
+                news — <h4 className={styles.newsTitle}>{node.frontmatter.title}</h4>
+                <img className={styles.heroImage} src={node.frontmatter.hero} alt={node.frontmatter.title} />
+                <div
                 className={styles.newsExcerpt}
                 dangerouslySetInnerHTML={{ __html: node.frontmatter.excerpt }}
-              />
+                />
+              </div>
             </Link>
           </article>
         ))
@@ -32,7 +34,9 @@ export const query = graphql`
     allMarkdownRemark(
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: {regex: "/(news)/"} }
+      filter: { 
+        fileAbsolutePath: { regex: "/(news)/" } 
+      }
     ) {
       totalCount
       edges {
@@ -40,6 +44,7 @@ export const query = graphql`
           id
           frontmatter {
             draft
+            hero
             path
             date(formatString: "DD MMMM, YYYY")
             excerpt
