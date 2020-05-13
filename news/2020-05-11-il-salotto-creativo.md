@@ -1,5 +1,6 @@
 ---
 draft: false
+Draft: false
 path: /news/il-salotto-creativo
 hero: /assets/salotto_post.png
 date: 2020-05-11T16:35:10.913Z
@@ -13,12 +14,12 @@ excerpt: >-
 
   Interesse, passione, curiosità, intraprendenza, perseveranza, audacia, sono solo alcuni tra i fattori che accomunano gli ospiti.
 ---
-## **Decimo appuntamento con Lise Arlot, co-owning art**
+### **Undicesimo appuntamento con Filadelfo Castro, musica e produzione**
 
-#### Giovedi 13 Maggio, 2020
+#### Mercoledì 20 Maggio, 2020
 
 **20:00**\
-**Live Instagram su @artebella.it**
+**Live Instagram su [@artebella.it](https://www.instagram.com/artebella.it/)**
 
 **Prossimi appuntamenti:**\
 — Mercoledì 20/05, 19:30 @Filadelfo Castro, musica e produzione\
@@ -36,4 +37,5 @@ Appuntamenti passati:\
 — Martedì 28/04, 19:30 @Albero Lina, tecnologia e arte\
 — Giovedì 30/04, 19:30 @Matteo Lanfranchi, teatro contemporaneo\
 — Martedì 05/05, 20:00 @Beatrice Novara, the Journey\
-— Giovedì 07/05, 19:30 @Ania Ambrosio, cinema oggi
+— Giovedì 07/05, 19:30 @Ania Ambrosio, cinema oggi\
+— Mercoledì 13/05, 19:30 @Lise Arlot, co-owning art
