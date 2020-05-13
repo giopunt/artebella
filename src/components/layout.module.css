@@ -22,11 +22,13 @@
   max-width: 300px;
   min-width: 250px;
   width: 100%;
+  border-left: 1px solid borderColor;
 }
 
 @media only screen and (max-width: 700px) { 
   .sidebar {
     max-width: 100%;
+    border-left: 0px;
   }
 }
 
@@ -37,7 +39,6 @@
 }
 
 .sidebar ul li {
-  border-left: 1px solid borderColor;
   border-bottom: 1px solid borderColor;
 }
 
