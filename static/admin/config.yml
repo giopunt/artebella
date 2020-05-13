@@ -12,7 +12,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: Draft, name: draft, widget: boolean, default: true }
+      - { label: draft, name: Draft, widget: boolean, default: true }
       - { name: path, label: Path }
       - { name: hero, label: Hero, widget: image }
       - { name: date, label: Date, widget: datetime }

@@ -35,7 +35,8 @@ export const query = graphql`
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { 
-        fileAbsolutePath: { regex: "/(news)/" } 
+        fileAbsolutePath: { regex: "/(news)/" },
+        frontmatter: { draft: { eq: false } } 
       }
     ) {
       totalCount
