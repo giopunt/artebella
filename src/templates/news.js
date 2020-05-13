@@ -13,6 +13,7 @@ export default ({ data }) => {
       news —
         <h1>{post.frontmatter.title}</h1>
         <img className={styles.hero} src={post.frontmatter.hero} />
+        <p>{post.frontmatter.excerpt}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -25,6 +26,7 @@ export const query = graphql`
       frontmatter {
         title
         hero
+        excerpt
       }
     }
   }

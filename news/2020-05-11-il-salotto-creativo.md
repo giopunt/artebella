@@ -1,6 +1,5 @@
 ---
 draft: false
-Draft: false
 path: /news/il-salotto-creativo
 hero: /assets/salotto_post.png
 date: 2020-05-11T16:35:10.913Z

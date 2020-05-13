@@ -2,13 +2,18 @@
   max-width: 660px;
   background: #fff;
   padding: 40px 30px;
-  margin: 0 auto;
+  margin: -1.45rem auto;
 }
 
 @media only screen and (max-width: 700px) { 
   .content {
-    padding: 40px 20px;
+    padding: 20px 20px;
+    margin: -1.45rem -1.0875rem;
   }
+}
+
+.content p {
+  font-weight: 400;
 }
 
 .hero {
